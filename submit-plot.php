@@ -16,6 +16,8 @@
         <br>
         Age: <input type="number" name="age" required>
         <br>
+        Age: <input type="number" name="age" required>
+        <br>
         <input type="submit">
 </form>
 
