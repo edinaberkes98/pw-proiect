@@ -23,6 +23,7 @@ $plots = $pdo->query("SELECT * FROM plots")->fetchAll();
                     <img src="<?php echo $base_url . 'plots/png/' . strtolower($plot['name']) . '.png' ?>" class="card-img-top rounded-top" alt="image">
                     <div class="card-body">
                         <a href="#" class="btn btn-primary btn-sm">View plot</a>
+                        <?php echo $plot['y_label'] ?>
                     </div>
                 </div>
             </div>

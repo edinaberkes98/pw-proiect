@@ -18,7 +18,10 @@ if(isset($_POST['name']) && isset($_POST['x_label']) && isset($_POST['y_label'])
     $width = $_POST['width'];
     $height = $_POST['height'];
 
-    $plot
+    if($format === 'svg') {
+        // svg generate
+    } else if ($format === 'png') {
+        $plot
         // Setting graph main title
         ->setGraphTitle($name)
         // Setting X & Y labels
@@ -57,6 +60,7 @@ if(isset($_POST['name']) && isset($_POST['x_label']) && isset($_POST['y_label'])
             'height' => $height,
             'format' => '.png',
         ]);
+    }
 }
 
 include ('includes/header.php');
