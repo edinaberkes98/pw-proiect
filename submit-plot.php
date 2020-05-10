@@ -60,9 +60,9 @@ include ('includes/navigation.php');
           </label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="format" id="format3" value="jpg" >
+          <input class="form-check-input" type="radio" name="format" id="format3" value="jpeg" >
           <label class="form-check-label" for="format3">
-            .jpg
+            .jpeg
           </label>
         </div>
         <!-- End of Radio -->

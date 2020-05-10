@@ -77,6 +77,36 @@ if(isset($_POST['name']) && isset($_POST['x_label']) && isset($_POST['y_label'])
         ->addLabel(2, 4.3, 'An important point')
         // Writing to out.png
         ->writePng('plots/png' . strtolower($name) . '.png');
+    }
+     else if ($format == 'jpeg') {
+        $plot
+        // Setting graph main title
+        ->setGraphTitle($name)
+        // Setting X & Y labels
+        ->setXLabel($x_label)
+        ->setYLabel($y_label)
+        // Setting graph dimensions
+        ->setWidth($width)
+        ->setHeight($height)
+        // Demo curve (index=0)
+        ->setTitle(0, 'Demo')
+        ->push(0, 1)
+        ->push(1, 10)
+        ->push(2, 3)
+        ->push(3, 2.6)
+        ->push(4, 5.3)
+        // Other curve, (index=1)
+        ->setTitle(1, 'Other curve')
+        ->push(0, 3.9, 1)
+        ->push(1, 2.3, 1)
+        ->push(2, 4.3, 1)
+        ->push(3, 3.1, 1)
+        ->push(4, 5.2, 1)
+        // Pointing out a value
+        ->addLabel(2, 4.3, 'An important point')
+        // Writing to out.jpeg
+        ->writePng('plots/jpeg' . strtolower($name) . '.jpeg');
+    
 
         $statement = $pdo->prepare('INSERT INTO plots (name, x_label, y_label, height, width, format)
             VALUES (:name, :x_label, :y_label, :height, :width, :format)');
