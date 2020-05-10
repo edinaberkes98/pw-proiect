@@ -44,7 +44,31 @@ include ('includes/navigation.php');
               <input type="number" class="form-control" id="height" name="height" placeholder="Height width">
           </div>
         </div>
-      </div>
+
+       <fieldset>
+          <legend class="h6">Selectati formatul dorit</legend>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="format" id="format1" value="png" checked>
+            <label class="form-check-label" for="format1">
+               .png
+            </label>
+         </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="format" id="format2" value="svg" >
+          <label class="form-check-label" for="format2">
+            .svg
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="format" id="format3" value="jpg" >
+          <label class="form-check-label" for="format3">
+            .jpg
+          </label>
+        </div>
+        <!-- End of Radio -->
+       </fieldset>
+
+     </div>
       <button type="submit" class="btn btn-primary">Generate plot</button>
   </form>
   </div>
