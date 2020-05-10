@@ -48,7 +48,6 @@ if(isset($_POST['name']) && isset($_POST['x_label']) && isset($_POST['y_label'])
         // Pointing out a value
         ->addLabel(2, 4.3, 'An important point')
         // Writing to out.svg
-        ->set output 'plots/svg' . strtolower($name) . '.svg'
         ->writePng('plots/svg' . strtolower($name) . '.svg');
     } else if ($format == 'png') {
         $plot
@@ -77,7 +76,6 @@ if(isset($_POST['name']) && isset($_POST['x_label']) && isset($_POST['y_label'])
         // Pointing out a value
         ->addLabel(2, 4.3, 'An important point')
         // Writing to out.png
-        ->set output 'output.png'
         ->writePng('plots/png' . strtolower($name) . '.png');
 
         $statement = $pdo->prepare('INSERT INTO plots (name, x_label, y_label, height, width, format)
