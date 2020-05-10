@@ -108,14 +108,5 @@ include ('includes/navigation.php');
         </div>
   </section>
 
-  <section class="section section-header">
-    <div class="container">
-        <div class="alert alert-success mb-3" role="alert">    
-            <span class="alert-inner--text">Your plot named <?php echo $name ?> has been succesfully generated! <a href="./submit-plot.php" class="text-white text-underline">Generate another plot</a>.</span>
-        </div>
-           <img src="plots/svg<?php echo strtolower($name) ?>.svg" alt="Plot <?php echo $name ?>">
-        </div>
-  </section>
-
  
 <?php include('includes/footer.php') ?>
