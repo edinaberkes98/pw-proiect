@@ -1,3 +1,4 @@
+<p class="text-center mt-5">Design by <a href="https://themesberg.com">Themesberg</a></p>
 <!-- Core -->
 <script src="./public/vendor/jquery/dist/jquery.min.js"></script>
 <script src="./public/vendor/popper.js/dist/umd/popper.min.js"></script>

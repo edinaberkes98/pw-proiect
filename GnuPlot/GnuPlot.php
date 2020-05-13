@@ -8,6 +8,8 @@ class GnuPlot {
 	
 	// Available terminals
 	const TERMINAL_PNG	= 'png';
+	const TERMINAL_SVG	= 'svg';
+	const TERMINAL_JPEG	= 'jpeg';
 	const TERMINAL_PDF	= 'pdf';
 	const TERMINAL_EPS	= 'eps';
 	
@@ -252,6 +254,22 @@ class GnuPlot {
     public function writePng($file)
     {
         $this->write(self::TERMINAL_PNG, $file);
+    }
+
+    /**
+     * Write the current plot to a PNG file
+     */
+    public function writeJpeg($file)
+    {
+        $this->write(self::TERMINAL_JPEG, $file);
+    }
+
+    /**
+     * Write the current plot to a PNG file
+     */
+    public function writeSVG($file)
+    {
+        $this->write(self::TERMINAL_SVG, $file);
     }
 	
 	/**
